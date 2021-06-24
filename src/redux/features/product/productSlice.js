@@ -6,7 +6,6 @@ const productSlice = createSlice({
   initialState: phones,
   reducers: {
     fetchItem: (state, action) => {
-      console.log("we fetched");
       return { ...state };
     },
   },

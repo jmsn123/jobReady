@@ -13,6 +13,7 @@ const Cart = () => {
         {products.length}
         {products.map((item) => (
           <div>
+            {item.length}
             {item.price}{" "}
             <button onClick={() => dispatch(remove(item))}>remove</button>
           </div>

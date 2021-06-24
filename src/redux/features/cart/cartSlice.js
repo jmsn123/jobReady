@@ -12,7 +12,6 @@ const cartSlice = createSlice({
       let addedToCart = false;
       state.push({ ...action.payload });
     },
-    getProducts: (state, action) => {},
     remove: (state, action) => {
       console.log(action.payload.id);
       console.log("state", state);
