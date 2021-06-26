@@ -6,4 +6,4 @@ const store = configureStore({
   reducer: { cart: cartReducer, product: productReducer, User },
 });
 export default store;
-export { add, remove, fetchItem };
+export { add, remove, fetchItem, User };

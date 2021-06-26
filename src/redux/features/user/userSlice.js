@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import api from "../../../api/api";
 const userSlice = createSlice({
   name: "user",
   initialState: {
@@ -22,15 +22,15 @@ export const login =
   ({ username, password }) =>
   async (dispatch) => {
     try {
-      const res = await api.post("/api/auth/login", { username, password });
+      //   const res = await api.post("/api/auth/login", { username, password });
       dispatch(loginSuccess({ username }));
     } catch (e) {
       return console.error(e.message);
     }
   };
-export const logiut = () => (dispatch) => {
+export const logout = () => async (dispatch) => {
   try {
-    const res = await api.post("/api/auth/logout");
+    // const res = await api.post("/api/auth/logout");
     return dispatch(logoutSuccess);
   } catch (e) {
     return console.error(e.message);
