@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const passportLocal = require("passport-local-mongoose");
 
 const bcrypt = require("bcryptjs");
 // will add more later but for now this is ok
@@ -40,4 +41,5 @@ UserSchema.methods.comparePassword = function (password, callback) {
   });
 };
 
+UserSchema.plugin(passportLocal);
 module.exports = mongoose.model("User", UserSchema);

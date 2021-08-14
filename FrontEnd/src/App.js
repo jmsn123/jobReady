@@ -1,33 +1,20 @@
-import "./App.css";
-import Cart from "./components/cart";
-import Login from "./components/login";
-import Product from "./components/Product";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { TextEditor } from "./components/noteTaker";
-import { ThemeProvider } from "styled-components";
-import { GlobalStlyes } from "./global";
-import Navbar from "./components/Nav/Navbar";
-import Hero from "./components/hero";
-import { Container } from "./components/Layout/Layout";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { GlobalStyle } from "./global";
 import Home from "./pages/Home";
-
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 function App() {
   return (
-    <Router>
-      <GlobalStlyes />
-
-      <Container>
-        {" "}
-        <Navbar />
-        <Hero />
+    <div>
+      <Router>
+        <GlobalStyle />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/product" component={Product} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/notetaker" component={TextEditor} />
+          <Route path="/About" component={Portfolio} />
+          <Route path="/Contact" component={Contact} />
         </Switch>
-      </Container>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
